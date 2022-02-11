@@ -8,12 +8,12 @@ router.get('/', (req, res) => {
 })
 
 router.get('/data', (req, res) => {
-    res.send(data)
+    res.json(data)
 })
 
 router.get('/data/:id', (req, res) => {
     const show = data.filter(d => d.id == req.params.id)
-    res.send(show)
+    res.json(show)
 })
 
 router.put('/data', (req, res) => {
